@@ -1,6 +1,7 @@
 package tek.bdd.base.steps;
 
-import org.junit.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import tek.bdd.utility.SeleniumUtility;
 
 public class HooksSteps extends SeleniumUtility {
@@ -11,6 +12,7 @@ public class HooksSteps extends SeleniumUtility {
         setupBrowser();
     }
 
+    @After
 public void afterEacheScenario() {
         quitBrowser();
 
