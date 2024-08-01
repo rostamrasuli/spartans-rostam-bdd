@@ -6,28 +6,26 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class BaseSetup {
-
-    //Encapsulating driver instance
     private static WebDriver driver;
 
     public void setupBrowser() {
-        driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.get("https://retail.tekschool-students.com/");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
+
     public void quitBrowser() {
-        //null check before quit
-        if (driver != null) {
+
+        if (driver !=null){
             driver.quit();
         }
 
     }
-    //Giving read-only indirect access to driver.
-    //restrict setting new driver instance
+
     public WebDriver getDriver() {
         return driver;
     }
+
 }
