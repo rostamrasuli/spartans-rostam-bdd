@@ -10,7 +10,6 @@ public class BaseSetup {
 
     //Encapsulating driver instance
     private static WebDriver driver;
-
     public void setupBrowser() {
         driver.get("https://retail.tekschool-students.com/");
         driver.manage().window().maximize();
